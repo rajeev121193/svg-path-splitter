@@ -101,8 +101,8 @@ export function PathSplitter(pathData) {
             data = pathClone(pathString);
         }
         if (!data.length) {
-            const pathCommand = /([a-z])[\s,]*((-?\d*\.?\d*(?:e[\-+]?\d+)?[\s]*,?[\s]*)+)/gi;
-            const pathValues = /(-?\d*\.?\d*(?:e[\-+]?\d+)?)[\s]*,?[\s]*/gi;
+            const pathCommand = /([a-z])[\s,]*((-?\d*\.?\d*(?:e[-+]?\d+)?[\s]*,?[\s]*)+)/gi;
+            const pathValues = /(-?\d*\.?\d*(?:e[-+]?\d+)?)[\s]*,?[\s]*/gi;
             String(pathString).replace(pathCommand, function (a, b, c) {
                 var params = [],
                     name = b.toLowerCase();
